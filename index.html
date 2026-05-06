@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Издательский дом Калем</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#hero">
+        <div class="brand-mark">К</div>
+        <div class="brand-text">
+          <strong>Издательский дом Калем</strong>
+          <span>Книги, тетради-тренажёры и учебные материалы</span>
+        </div>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">⋮</button>
+
+      <nav class="top-nav" id="topNav">
+  <a href="#hero">Главная</a>
+  <a href="#catalog">Книги</a>
+  <a href="#trainers">Тетради-тренажёры</a>
+  <a href="#about">О нас</a>
+  <a href="#contacts">Контакты</a>
+  <button class="small-btn nav-login-btn" id="openAdminLogin" type="button">Вход</button>
+</nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <span class="eyebrow">Современный сайт издательства</span>
+          <h1>Издательский дом «Калем» — книги, тетради-тренажёры и учебные материалы</h1>
+          <p class="hero-text">
+            Красивый и современный сайт издательства с каталогом продукции, блоком о компании,
+            разделом для тетрадей-тренажёров, контактами, формой связи и скрытой аналитикой
+            для владельца сайта.
+          </p>
+
+          <div class="hero-actions">
+  <a href="#catalog" class="btn btn-primary">Смотреть каталог</a>
+  <a href="#about" class="btn btn-secondary">О компании</a>
+</div>
+
+          <div class="hero-metrics">
+            <div class="metric-box"><strong>120+</strong><span>Изданий</span></div>
+            <div class="metric-box"><strong>10</strong><span>Регионов в опросе</span></div>
+            <div class="metric-box"><strong>24/7</strong><span>Онлайн-каталог</span></div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-collage">
+            <div class="hero-card hero-card-a"><img src="images/hero-book-1.jfif" alt="Книга Калем"></div>
+            <div class="hero-card hero-card-b"><img src="images/hero-book-2.jpeg" alt="Тетрадь-тренажёр Калем"></div>
+            <div class="hero-card hero-card-c"><img src="images/hero-book-3.jpeg" alt="Учебное пособие Калем"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="catalog">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Каталог издательства</span><h2>Книги</h2></div>
+          <p>Здесь можно показать школьные книги, пособия, методические материалы, новинки и популярные издания.</p>
+        </div>
+
+        <div class="catalog-tools">
+          <div class="filters">
+            <button class="filter-btn active" data-target="booksGrid" data-filter="all">Все</button>
+            <button class="filter-btn" data-target="booksGrid" data-filter="school">Школа</button>
+            <button class="filter-btn" data-target="booksGrid" data-filter="language">Языки</button>
+            <button class="filter-btn" data-target="booksGrid" data-filter="math">Математика</button>
+          </div>
+          <input type="text" id="bookSearch" class="search-input" placeholder="Поиск по книгам..." />
+        </div>
+
+        <div class="catalog-grid" id="booksGrid">
+          <article class="catalog-card searchable-card" data-product="Азбука Калем" data-type="school" data-name="Азбука Калем" data-desc="Яркая книга для начального обучения чтению с иллюстрациями и заданиями.">
+            <div class="catalog-image"><img src="images/book-1.jpeg" alt="Азбука Калем"><span class="badge">Книга</span></div>
+            <div class="catalog-body">
+              <h3>Азбука Калем</h3><p>Яркая книга для начального обучения чтению с иллюстрациями и заданиями.</p>
+              <div class="card-meta"><span>Начальная школа</span><span>Популярное</span></div>
+              <div class="card-actions"><button class="btn btn-soft track-view">Подробнее</button><button class="btn btn-soft track-fav">В избранное</button><button class="btn btn-primary track-order">Заказать</button></div>
+            </div>
+          </article>
+
+          <article class="catalog-card searchable-card" data-product="Математика. Практикум" data-type="math" data-name="Математика. Практикум" data-desc="Практический сборник задач, упражнений и тренировки навыков.">
+            <div class="catalog-image"><img src="images/book-2.jpeg" alt="Математика Практикум"><span class="badge">Книга</span></div>
+            <div class="catalog-body">
+              <h3>Математика. Практикум</h3><p>Практический сборник задач, упражнений и тренировки навыков.</p>
+              <div class="card-meta"><span>Математика</span><span>5–9 классы</span></div>
+              <div class="card-actions"><button class="btn btn-soft track-view">Подробнее</button><button class="btn btn-soft track-fav">В избранное</button><button class="btn btn-primary track-order">Заказать</button></div>
+            </div>
+          </article>
+
+          <article class="catalog-card searchable-card" data-product="English Step by Step" data-type="language" data-name="English Step by Step" data-desc="Пособие по английскому языку с упражнениями и базовой лексикой.">
+            <div class="catalog-image"><img src="images/book-3.jpeg" alt="English Step by Step"><span class="badge">Книга</span></div>
+            <div class="catalog-body">
+              <h3>English Step by Step</h3><p>Пособие по английскому языку с упражнениями и базовой лексикой.</p>
+              <div class="card-meta"><span>Английский</span><span>Школьный курс</span></div>
+              <div class="card-actions"><button class="btn btn-soft track-view">Подробнее</button><button class="btn btn-soft track-fav">В избранное</button><button class="btn btn-primary track-order">Заказать</button></div>
+            </div>
+          </article>
+
+          <article class="catalog-card searchable-card" data-product="Кыргыз тили. Окуу китеби" data-type="language" data-name="Кыргыз тили. Окуу китеби" data-desc="Учебное издание по кыргызскому языку с примерами и заданиями.">
+            <div class="catalog-image"><img src="images/book-4.jpeg" alt="Кыргыз тили"><span class="badge">Книга</span></div>
+            <div class="catalog-body">
+              <h3>Кыргыз тили. Окуу китеби</h3><p>Учебное издание по кыргызскому языку с примерами и заданиями.</p>
+              <div class="card-meta"><span>Кыргызский язык</span><span>Учебник</span></div>
+              <div class="card-actions"><button class="btn btn-soft track-view">Подробнее</button><button class="btn btn-soft track-fav">В избранное</button><button class="btn btn-primary track-order">Заказать</button></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="trainers">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Практика и закрепление</span><h2>Тетради-тренажёры</h2></div>
+          <p>Отдельная панель для тетрадей-тренажёров: можно показывать предмет, возраст, класс, популярность и преимущества.</p>
+        </div>
+
+        <div class="catalog-tools">
+          <div class="filters">
+            <button class="filter-btn active" data-target="trainersGrid" data-filter="all">Все</button>
+            <button class="filter-btn" data-target="trainersGrid" data-filter="reading">Чтение</button>
+            <button class="filter-btn" data-target="trainersGrid" data-filter="math">Математика</button>
+            <button class="filter-btn" data-target="trainersGrid" data-filter="english">Английский</button>
+          </div>
+          <input type="text" id="trainerSearch" class="search-input" placeholder="Поиск по тренажёрам..." />
+        </div>
+
+        <div class="trainer-grid" id="trainersGrid">
+          <article class="trainer-panel searchable-card" data-product="Тренажёр по чтению" data-type="reading" data-name="Тренажёр по чтению" data-desc="Развитие техники чтения, понимания текста и словарного запаса.">
+            <div class="trainer-photo"><img src="images/trainer-1.jpeg" alt="Тренажёр по чтению"></div>
+            <div class="trainer-content"><h3>Тренажёр по чтению</h3><p>Развитие техники чтения, понимания текста и словарного запаса.</p><ul><li>Упражнения по уровням</li><li>Работа с текстом</li><li>Подходит для школы</li></ul><div class="card-actions"><button class="btn btn-soft track-view">Подробнее</button><button class="btn btn-soft track-fav">В избранное</button><button class="btn btn-primary track-order">Заказать</button></div></div>
+          </article>
+
+          <article class="trainer-panel searchable-card" data-product="Тренажёр по математике" data-type="math" data-name="Тренажёр по математике" data-desc="Примеры, логика, задачи и постепенное закрепление навыков.">
+            <div class="trainer-photo"><img src="images/trainer-2.jpeg" alt="Тренажёр по математике"></div>
+            <div class="trainer-content"><h3>Тренажёр по математике</h3><p>Примеры, логика, задачи и постепенное закрепление навыков.</p><ul><li>Счёт и логика</li><li>Пошаговые задания</li><li>Для самостоятельной работы</li></ul><div class="card-actions"><button class="btn btn-soft track-view">Подробнее</button><button class="btn btn-soft track-fav">В избранное</button><button class="btn btn-primary track-order">Заказать</button></div></div>
+          </article>
+
+          <article class="trainer-panel searchable-card" data-product="Тренажёр по английскому" data-type="english" data-name="Тренажёр по английскому" data-desc="Лексика, грамматика, мини-тесты и упражнения для закрепления.">
+            <div class="trainer-photo"><img src="images/trainer-4.jpeg" alt="Тренажёр по английскому"></div>
+            <div class="trainer-content"><h3>Тренажёр по английскому</h3><p>Лексика, грамматика, мини-тесты и упражнения для закрепления.</p><ul><li>Слова и выражения</li><li>Грамматические темы</li><li>Повторение и проверка</li></ul><div class="card-actions"><button class="btn btn-soft track-view">Подробнее</button><button class="btn btn-soft track-fav">В избранное</button><button class="btn btn-primary track-order">Заказать</button></div></div>
+          </article>
+
+          <article class="trainer-panel searchable-card" data-product="Тренажёр для начальной школы" data-type="reading" data-name="Тренажёр для начальной школы" data-desc="Универсальная тетрадь с упражнениями для младших классов.">
+            <div class="trainer-photo"><img src="images/trainer-4.jpeg" alt="Тренажёр для начальной школы"></div>
+            <div class="trainer-content"><h3>Тренажёр для начальной школы</h3><p>Универсальная тетрадь с упражнениями для младших классов.</p><ul><li>Комплексные задания</li><li>Для повторения тем</li><li>Удобный формат</li></ul><div class="card-actions"><button class="btn btn-soft track-view">Подробнее</button><button class="btn btn-soft track-fav">В избранное</button><button class="btn btn-primary track-order">Заказать</button></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">О компании</span><h2>О нас</h2></div>
+          <p>Этот блок можно оформить как полноценную презентацию издательского дома: история, миссия, преимущества и направления.</p>
+        </div>
+
+        <div class="about-layout">
+          <div class="about-main-card">
+            <div class="about-image"><img src="images/about-kalem.jpeg" alt="Издательский дом Калем"></div>
+            <div class="about-text">
+              <h3>Издательский дом «Калем»</h3>
+              <p>Издательство может специализироваться на выпуске книг, школьных пособий, тетрадей-тренажёров, методических материалов и учебной литературы.</p>
+              <p>Такой сайт помогает красиво показать продукцию и собирать аналитику: какие товары открывают чаще, что добавляют в избранное, что заказывают, из каких регионов заходят пользователи.</p>
+            </div>
+          </div>
+
+          <div class="about-side">
+            <div class="info-card"><h4>Что можно добавить</h4><ul><li>Новинки издательства</li><li>Авторы и составители</li><li>Каталог по предметам</li><li>Оптовым клиентам</li><li>Отзывы школ и родителей</li><li>Доставка и оплата</li></ul></div>
+            <div class="info-card"><h4>Почему это удобно</h4><ul><li>Красивое оформление каталога</li><li>Скрытая аналитика</li><li>Учет кликов и заказов</li><li>Сбор возраста и региона аудитории</li><li>Возможность доработки в будущем</li></ul></div>
+          </div>
+        </div>
+
+        <div class="advantage-grid">
+          <div class="advantage-card"><strong>Каталог</strong><span>Книги, пособия, тетради, новинки</span></div>
+          <div class="advantage-card"><strong>Аналитика</strong><span>Посещения, клики, избранное, заказы</span></div>
+          <div class="advantage-card"><strong>Опрос</strong><span>Возраст и регион пользователей</span></div>
+          <div class="advantage-card"><strong>Контакты</strong><span>Форма связи, соцсети, телефон, адрес</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head"><div><span class="eyebrow">Дополнительные панели</span><h2>Почему выбирают «Калем»</h2></div><p>Это ещё один красивый блок, чтобы сайт выглядел богаче и солиднее.</p></div>
+        <div class="reason-grid">
+          <div class="reason-card"><h3>Качественные материалы</h3><p>Современный подход к оформлению учебных изданий и пособий.</p></div>
+          <div class="reason-card"><h3>Для школ и учеников</h3><p>Удобные форматы для учебного процесса, домашних заданий и практики.</p></div>
+          <div class="reason-card"><h3>Разные направления</h3><p>Книги, тетради-тренажёры, методические материалы и новинки.</p></div>
+          <div class="reason-card"><h3>Удобный заказ</h3><p>Пользователь может быстро выбрать товар и оформить заявку.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-section">
+      <div class="container">
+        <div class="section-head"><div><span class="eyebrow">Частые вопросы</span><h2>FAQ</h2></div></div>
+        <div class="faq-list">
+          <div class="faq-item"><button class="faq-question">Можно ли заказать книги оптом?</button><div class="faq-answer"><p>Да, на сайте можно добавить отдельный раздел для школ, магазинов и оптовых клиентов.</p></div></div>
+          <div class="faq-item"><button class="faq-question">Есть ли доставка по Кыргызстану?</button><div class="faq-answer"><p>Да, можно указать доставку по Бишкеку, Ошу и регионам Кыргызстана.</p></div></div>
+          <div class="faq-item"><button class="faq-question">Можно ли добавить реальные фото книг?</button><div class="faq-answer"><p>Да, просто загрузи свои фотографии в папку <strong>images</strong> и поменяй путь в теге img.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contacts">
+      <div class="container">
+        <div class="section-head"><div><span class="eyebrow">Связь с издательством</span><h2>Контакты</h2></div></div>
+        <div class="contacts-layout">
+          <div class="contact-panel">
+            <h3>Наши контакты</h3>
+            <p><strong>Телефон:</strong> 49-19-36</p><p><strong>WhatsApp:</strong> +996 (706) 75-76-10</p><p><strong>Email:</strong> kalem14@mail.ru</p><p><strong>Instagram:</strong> @kalem.press</p><p><strong>Адрес:</strong> г. Бишкек, ул. Курчатова, 69</p>
+          </div>
+          <form class="contact-form" id="contactForm"><h3>Оставить заявку</h3><input type="text" id="contactName" placeholder="Ваше имя" required><input type="text" id="contactPhone" placeholder="Телефон или WhatsApp" required><textarea id="contactMessage" rows="5" placeholder="Напишите, что вас интересует"></textarea><button type="submit" class="btn btn-primary">Отправить заявку</button></form>
+        </div>
+      </div>
+    </section>
+
+   <section class="analytics-section hidden" id="analytics">
+  <div class="container">
+    <div class="analytics-dashboard" id="analyticsDashboard">
+      <div class="admin-dashboard-head">
+        <div>
+          <span class="admin-pill">Analytics Dashboard</span>
+          <h2>Сводная аналитика по сайту издательства</h2>
+          <p>Здесь показываются заходы, просмотры, клики, избранное, заказы и результаты опроса.</p>
+        </div>
+        <div class="admin-actions">
+          <button class="ghost-btn" id="resetDataBtn">Сбросить данные</button>
+          <button class="primary-btn" id="logoutBtn">Выйти</button>
+        </div>
+      </div>
+
+      <div class="admin-mini-grid">
+        <div><strong id="conversionValue">0%</strong><span>Конверсия в заказ</span></div>
+        <div><strong id="surveyCount">0</strong><span>Ответов в опросе</span></div>
+      </div>
+
+      <div class="metrics-grid">
+        <article class="admin-metric-card"><span>Посещения</span><strong id="visitsValue">0</strong></article>
+        <article class="admin-metric-card"><span>Просмотры страниц</span><strong id="pageViewsValue">0</strong></article>
+        <article class="admin-metric-card"><span>Клики</span><strong id="clicksValue">0</strong></article>
+        <article class="admin-metric-card"><span>Избранное</span><strong id="favoritesValue">0</strong></article>
+        <article class="admin-metric-card"><span>Заказы</span><strong id="ordersValue">0</strong></article>
+        <article class="admin-metric-card"><span>Товары в статистике</span><strong id="productsCountValue">0</strong></article>
+      </div>
+
+      <div class="chart-grid">
+        <article class="panel-card wide">
+          <div class="panel-head">
+            <h3>Посещения за последние дни</h3>
+            <span>Линейный график</span>
+          </div>
+          <svg id="visitsChart" viewBox="0 0 700 240" class="chart-svg"></svg>
+        </article>
+
+        <article class="panel-card">
+          <div class="panel-head">
+            <h3>Возраст аудитории</h3>
+            <span>Кольцевая диаграмма</span>
+          </div>
+          <div class="donut-wrap">
+            <div class="donut" id="ageDonut"></div>
+            <div class="legend" id="ageLegend"></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="chart-grid second">
+        <article class="panel-card">
+          <div class="panel-head">
+            <h3>Регионы посещений</h3>
+            <span>На основе опроса</span>
+          </div>
+          <div class="bars" id="regionBars"></div>
+        </article>
+
+        <article class="panel-card">
+          <div class="panel-head">
+            <h3>Топ товаров</h3>
+            <span>Просмотры / избранное / заказы</span>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Товар</th>
+                  <th>Просмотры</th>
+                  <th>Избранное</th>
+                  <th>Заказы</th>
+                </tr>
+              </thead>
+              <tbody id="productsTableBody"></tbody>
+            </table>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-wrap"><p>©️ 2026 Издательский дом Калем</p><a href="#analytics" class="footer-link"></a></div></footer>
+
+  <div class="survey-modal hidden" id="surveyModal">
+    <div class="survey-card">
+      <button class="close-modal" id="closeSurvey">×</button>
+      <span class="eyebrow">Небольшой опрос</span><h3>Помогите нам лучше понять аудиторию</h3>
+      <form id="surveyForm">
+        <label>Сколько вам лет?<input type="number" min="5" max="100" id="ageInput" required placeholder="Например, 21" /></label>
+        <label>Откуда вы заходите?<select id="regionInput" required><option value="">Выберите регион</option><option>Баткенская область</option><option>Чуйская область</option><option>Джалал-Абадская область</option><option>Иссык-Кульская область</option><option>Нарынская область</option><option>Ошская область</option><option>Таласская область</option><option>г. Бишкек</option><option>г. Ош</option><option>Другое</option></select></label>
+        <label>Если выбрали «Другое»<input type="text" id="otherInput" placeholder="Напишите свой регион" /></label>
+        <button type="submit" class="btn btn-primary full-width">Отправить</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="product-modal hidden" id="productModal">
+    <div class="product-modal-card">
+      <button class="close-modal" id="closeProductModal">×</button>
+      <div class="product-modal-grid"><div class="product-modal-image"><img id="modalImage" src="" alt="Изображение товара"></div><div class="product-modal-content"><span class="eyebrow">Карточка товара</span><h3 id="modalTitle">Название</h3><p id="modalDesc">Описание товара</p><div class="card-actions"><button class="btn btn-soft" id="modalFavBtn">В избранное</button><button class="btn btn-primary" id="modalOrderBtn">Заказать</button></div></div></div>
+    </div>
+  </div>
+<button class="floating-survey-btn" id="openSurveyFloating" type="button">Опрос</button>
+
+<div class="admin-modal hidden" id="adminLoginModal">
+  <div class="admin-modal-card">
+    <button class="admin-modal-close" id="closeAdminLogin" type="button">×</button>
+    <span class="admin-pill">Скрытая аналитика</span>
+    <h2>Вход в панель аналитики</h2>
+    <p>
+      Это закрытая панель владельца сайта. После входа откроется раздел аналитики
+      с посещениями, кликами, избранным, заказами и результатами опроса.
+    </p>
+
+    <form id="adminLoginForm" class="admin-form">
+      <label>
+        Логин
+        <input type="text" id="adminUser" placeholder="admin" required>
+      </label>
+
+      <label>
+        Пароль
+        <input type="password" id="adminPass" placeholder="Введите пароль" required>
+      </label>
+
+      <button class="admin-btn" type="submit">Войти</button>
+    </form>
+
+    <div class="note">
+      Демо-данные: логин <strong>admin</strong>, пароль <strong>Kalem2026!</strong>
+    </div>
+  </div>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>

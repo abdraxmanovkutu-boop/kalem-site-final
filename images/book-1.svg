@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="650" viewBox="0 0 900 650">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2f6bff"/><stop offset="1" stop-color="#12c6b2"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#142452" flood-opacity=".24"/></filter>
+  </defs>
+  <rect width="900" height="650" fill="url(#bg)"/>
+  <circle cx="20" cy="20" r="150" fill="#fff" opacity=".18"/>
+  <circle cx="805" cy="560" r="190" fill="#fff" opacity=".14"/>
+  <circle cx="740" cy="95" r="135" fill="#fff" opacity=".12"/>
+  <g filter="url(#shadow)">
+    <rect x="120" y="100" width="330" height="460" rx="26" fill="#fff"/>
+    <rect x="145" y="130" width="52" height="400" rx="10" fill="#e6eeff"/>
+    <rect x="225" y="190" width="170" height="54" rx="16" fill="#2f6bff"/>
+    <rect x="225" y="270" width="145" height="42" rx="13" fill="#12c6b2"/>
+    <rect x="225" y="335" width="120" height="42" rx="13" fill="#ffc84d"/>
+    <line x1="235" y1="430" x2="390" y2="430" stroke="#d7deef" stroke-width="10" stroke-linecap="round"/>
+    <line x1="235" y1="465" x2="365" y2="465" stroke="#d7deef" stroke-width="10" stroke-linecap="round"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="495" y="135" width="330" height="370" rx="30" fill="#fff" opacity=".95"/>
+    <text x="535" y="215" font-family="Arial, sans-serif" font-size="38" font-weight="700" fill="#182033">Kalem</text>
+    <text x="535" y="270" font-family="Arial, sans-serif" font-size="24" fill="#5f708c">Book and trainer cover</text>
+    <rect x="535" y="345" width="210" height="48" rx="24" fill="#eef3ff"/>
+    <text x="558" y="377" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#2f6bff">Press</text>
+    <text x="535" y="465" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#2f6bff">Publishing House</text>
+  </g>
+</svg>
