@@ -452,8 +452,26 @@ function bindFaq() {
 function bindMenu() {
   const btn = document.getElementById('menuToggle');
   const nav = document.getElementById('topNav');
-  btn?.addEventListener('click', () => nav?.classList.toggle('open'));
-  nav?.querySelectorAll('a, button').forEach(item => item.addEventListener('click', () => nav.classList.remove('open')));
+
+  if (!btn || !nav) return;
+
+  btn.addEventListener('click', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    nav.classList.toggle('open');
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!nav.contains(e.target) && e.target !== btn) {
+      nav.classList.remove('open');
+    }
+  });
+
+  nav.querySelectorAll('a, button').forEach(function (item) {
+    item.addEventListener('click', function () {
+      nav.classList.remove('open');
+    });
+  });
 }
 
 function bindContactForm() {
